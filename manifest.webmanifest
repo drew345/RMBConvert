@@ -1,0 +1,9 @@
+{
+  "name": "RMB Dollar Converter",
+  "short_name": "RMB USD",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f4ec",
+  "theme_color": "#f7f4ec",
+  "icons": []
+}
