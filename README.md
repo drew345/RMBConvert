@@ -19,6 +19,7 @@ Then visit `http://localhost:8080`.
 - Keeps working with the last saved rate if you are offline.
 - Lets you enter a custom CNY-per-USD rate.
 - Remembers your last amount, direction, and rate choice.
+- Installs as a small offline-capable web app.
 
 ## Publish to GitHub Pages
 
