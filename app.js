@@ -45,18 +45,12 @@
     inputLabel: document.querySelector("#inputLabel"),
     inputSymbol: document.querySelector("#inputSymbol"),
     amountInput: document.querySelector("#amountInput"),
-    quickAmounts: document.querySelector("#quickAmounts"),
     resultLabel: document.querySelector("#resultLabel"),
     resultValue: document.querySelector("#resultValue"),
     copyResult: document.querySelector("#copyResult"),
     customRate: document.querySelector("#customRate"),
     useCustom: document.querySelector("#useCustom"),
     useLive: document.querySelector("#useLive")
-  };
-
-  const quickAmounts = {
-    "cny-usd": [20, 50, 100, 500],
-    "usd-cny": [5, 10, 20, 100]
   };
 
   const money = {
@@ -95,22 +89,6 @@
     return state.amount * state.activeRate;
   }
 
-  function renderQuickAmounts() {
-    el.quickAmounts.innerHTML = "";
-    quickAmounts[state.mode].forEach((amount) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.textContent = state.mode === "cny-usd" ? `RMB ${amount}` : `$${amount}`;
-      button.addEventListener("click", () => {
-        state.amount = amount;
-        el.amountInput.value = amount;
-        saveState();
-        render();
-      });
-      el.quickAmounts.appendChild(button);
-    });
-  }
-
   function render() {
     const isCnyToUsd = state.mode === "cny-usd";
     const result = conversionResult();
@@ -133,7 +111,6 @@
     el.refreshRate.title = `${state.rateSource}. Last updated: ${formatRateDate(state.lastUpdated)}`;
     el.customRate.value = state.rateMode === "custom" ? state.activeRate : "";
 
-    renderQuickAmounts();
   }
 
   function setMode(mode) {
