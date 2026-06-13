@@ -189,14 +189,6 @@ button {
   font-weight: 900;
 }
 
-.quick-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  margin: 12px 0 16px;
-}
-
-.quick-grid button,
 .result-panel button,
 .settings-actions button {
   min-height: 40px;
@@ -207,7 +199,6 @@ button {
   font-weight: 800;
 }
 
-.quick-grid button:hover,
 .result-panel button:hover,
 .settings-actions button:hover,
 .icon-button:hover {
@@ -217,6 +208,7 @@ button {
 .result-panel {
   justify-content: space-between;
   gap: 12px;
+  margin-top: 14px;
   padding: 14px;
   min-height: 104px;
   border-radius: 8px;
@@ -288,9 +280,5 @@ button {
 @media (max-width: 360px) {
   .converter {
     padding: 14px;
-  }
-
-  .quick-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
