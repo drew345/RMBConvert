@@ -1,6 +1,8 @@
 # RMB Dollar Converter
 
-A tiny static converter for China RMB to US dollars and US dollars to RMB.
+A tiny static web app for converting Chinese RMB to US dollars and US dollars to RMB.
+
+It is designed to be dependency-free, easy to host on GitHub Pages, and usable offline after the first load.
 
 ## Use locally
 
@@ -23,4 +25,6 @@ Then visit `http://localhost:8080`.
 
 ## Publish to GitHub Pages
 
-Create a GitHub repo, push this folder, then enable Pages for the repo's main branch.
+Push this folder to GitHub, then enable Pages for the repo's main branch.
+
+No API key is required.
